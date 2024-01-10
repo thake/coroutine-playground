@@ -1,10 +1,12 @@
 import io.github.oshai.kotlinlogging.KotlinLogging
+import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-val logger = KotlinLogging.logger {}
+private val logger = KotlinLogging.logger {}
 fun main() = runBlocking {
     newCoroutineScope()
     logger.info { "World!" }
